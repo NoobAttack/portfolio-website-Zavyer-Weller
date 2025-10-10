@@ -1,0 +1,90 @@
+/* style.css */
+
+/* Define the color palette for easy use */
+:root {
+	--primary-bg: #0a192f;
+	--secondary-text: #8892b0;
+	/* Use the user's tea-green as the accent color */
+	--tea-green: hsla(75, 83%, 84%, 1);
+	--accent-color: var(--tea-green);
+	--main-text: #e6f1ff;
+
+	/* Additional colors from user's palette (HSL) */
+	--coffee: hsla(29, 42%, 31%, 1);
+	--reseda-green: hsla(50, 14%, 42%, 1);
+	--mindaro: hsla(75, 68%, 70%, 1);
+	--reseda-green-2: hsla(131, 13%, 50%, 1);
+}
+
+body {
+	background-color: var(--primary-bg);
+	color: var(--secondary-text);
+	font-family: 'Roboto', sans-serif;
+	margin: 0;
+}
+
+/* Navigation bar */
+.navbar {
+	background-color: transparent;
+}
+
+.navbar .navbar-brand {
+	color: var(--main-text);
+	font-weight: 700;
+	font-size: 1.25rem;
+}
+
+/* Main content section styling */
+.hero-section {
+	min-height: 85vh;
+}
+
+/* Professional Image Styling */
+.profile-image {
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	border: 3px solid var(--accent-color);
+	object-fit: cover;
+}
+
+/* Title Styling */
+.main-title {
+	color: var(--main-text);
+	font-weight: 700;
+	font-size: 3.5rem;
+	margin-bottom: 0.25rem;
+}
+
+.sub-title {
+	color: var(--accent-color);
+	font-weight: 400;
+	font-size: 1.25rem;
+	margin-bottom: 1rem;
+}
+
+/* Description Styling */
+.main-description {
+	color: var(--secondary-text);
+	font-size: 1.1rem;
+	font-weight: 300;
+	line-height: 1.6;
+	max-width: 600px;
+}
+
+/* Footer Styling */
+footer {
+	font-size: 0.9rem;
+	color: var(--secondary-text);
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+	.main-title {
+		font-size: 2.5rem;
+	}
+
+	.main-description {
+		font-size: 1rem;
+	}
+}
