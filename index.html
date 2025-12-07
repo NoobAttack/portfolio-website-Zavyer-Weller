@@ -3,7 +3,23 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Zavyer Weller | Portfolio</title>
+		<title>Zavyer Weller | Portfolio - Web Developer & Student</title>
+
+		<!-- SEO Meta Tags -->
+		<meta
+			name="description"
+			content="Zavyer Weller's portfolio website. Student learning web development with HTML, CSS, JavaScript, Vue.js, and more. View projects and get in touch."
+		/>
+		<meta
+			name="keywords"
+			content="Zavyer Weller, web developer, portfolio, HTML, CSS, JavaScript, Vue.js, student developer, frontend developer"
+		/>
+		<meta name="author" content="Zavyer Weller" />
+		<meta name="robots" content="index, follow" />
+
+		<!-- Favicon -->
+		<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+		<link rel="alternate icon" href="favicon.ico" />
 
 		<link
 			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
@@ -13,7 +29,7 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
-			href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Roboto:wght@300;400;700&display=swap"
 			rel="stylesheet"
 		/>
 
@@ -23,8 +39,18 @@
 		<nav class="navbar navbar-dark py-3">
 			<div class="container d-flex align-items-center">
 				<a class="navbar-brand main-title mb-0" href="#">Zavyer Weller</a>
-				<div class="ms-auto">
+				<div class="ms-auto d-flex gap-3 align-items-center">
 					<a class="nav-link text-light" href="#about">About</a>
+					<a class="nav-link text-light" href="#skills">Skills</a>
+					<a class="nav-link text-light" href="#projects">Projects</a>
+					<a class="nav-link text-light" href="#contact">Contact</a>
+					<button
+						id="theme-toggle"
+						class="theme-toggle-btn"
+						aria-label="Toggle theme"
+					>
+						<span class="theme-icon">🌙</span>
+					</button>
 				</div>
 			</div>
 		</nav>
@@ -34,37 +60,446 @@
 		>
 			<div class="text-center">
 				<img
-					src="Weller_Zavyer_Vue_CLI\hello-world\src\assets\profilepic.jpg"
+					src="Weller_Zavyer_Vue_CLI/hello-world/src/assets/profilepic.jpg"
 					alt="A professional headshot of Zavyer Weller"
 					class="profile-image mb-4"
+					loading="lazy"
+					width="180"
+					height="180"
 				/>
 
-				<h1>
-					Hello, my name is <span>Zavyer</span> <br />
-					Weller and I am learning coding everyday
+				<h1 class="hero-title">
+					Hello, my name is <span class="accent-text">Zavyer</span> <br />
+					Weller and I am learning how to code everyday
 				</h1>
 
-				<p class="main-description mx-auto">
+				<p class="main-description mx-auto hero-description">
 					I hope to improve my coding abilities each day
 				</p>
+
+				<div class="hero-buttons mt-4">
+					<a href="#about" class="btn-primary">Learn More</a>
+				</div>
 			</div>
 		</div>
 
 		<section id="about" class="container about-section py-5">
 			<div class="row">
-				<div class="col-lg-8 mx-auto text-center">
+				<div class="col-12 text-center mb-4">
 					<h2 class="main-title">About Me</h2>
-					<p class="main-description mt-3">
-						I'm Zavyer Weller - a student, learning new skills every day. I
-						enjoy building small projects, improving my skills.
-					</p>
-					<a href="#top" class="btn btn-outline-light mt-4">Back to top</a>
+				</div>
+			</div>
+			<div class="row g-4 mt-2">
+				<div class="col-md-4">
+					<div class="about-card">
+						<div class="about-card-icon">👨‍🎓</div>
+						<h3 class="about-card-title">Student & Learner</h3>
+						<p class="about-card-text">
+							I'm Zavyer Weller, a student learning new skills and learning new
+							coding techniques.
+						</p>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="about-card">
+						<div class="about-card-icon">🚀</div>
+						<h3 class="about-card-title">Building Projects</h3>
+						<p class="about-card-text">
+							Building small projects helps me to imrpove my ability to create
+							larger projects and different coding problems.
+						</p>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="about-card">
+						<div class="about-card-icon">💻</div>
+						<h3 class="about-card-title">Technologies</h3>
+						<p class="about-card-text">
+							Learning HTML, CSS, JavaScript, Vue.js, Git, GitHub, and
+							Bootstrap.
+						</p>
+					</div>
 				</div>
 			</div>
 		</section>
 
-		<section id="skills" class=" "></section>
+		<section id="skills" class="container skills-section py-5">
+			<div class="row">
+				<div class="col-lg-8 mx-auto text-center">
+					<h2 class="main-title">Skills</h2>
+					<p class="main-description mt-3">
+						Technologies and tools I'm learning and working with.
+					</p>
+					<div class="skills-list mt-4">
+						<div class="skill-badge">HTML</div>
+						<div class="skill-badge">CSS</div>
+						<div class="skill-badge">JavaScript</div>
+						<div class="skill-badge">Vue.js</div>
+						<div class="skill-badge">Bootstrap</div>
+						<div class="skill-badge">Git</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="projects" class="container projects-section py-5">
+			<div class="row">
+				<div class="col-12 text-center mb-4">
+					<h2 class="main-title">Projects</h2>
+					<p class="main-description mt-3">
+						This is a list of projects I've been working on to improve my skills
+					</p>
+				</div>
+			</div>
+			<div class="row g-4 mt-2">
+				<div class="col-md-6 col-lg-4">
+					<div class="project-card">
+						<div class="project-image">
+							<div class="project-placeholder">🌐</div>
+						</div>
+						<div class="project-content">
+							<h3 class="project-title">Portfolio Website</h3>
+							<p class="project-description">
+								This responsive portfolio website built with HTML, CSS, and
+								JavaScript. Features modern design, theme toggle, and smooth
+								animations.
+							</p>
+							<div class="project-tech">
+								<span class="tech-tag">HTML</span>
+								<span class="tech-tag">CSS</span>
+								<span class="tech-tag">JavaScript</span>
+								<span class="tech-tag">Bootstrap</span>
+							</div>
+							<div class="project-links">
+								<a
+									href="https://github.com/NoobAttack/portfolio-website-Zavyer-Weller"
+									target="_blank"
+									rel="noopener noreferrer"
+									class="project-link"
+								>
+									<svg
+										width="20"
+										height="20"
+										viewBox="0 0 24 24"
+										fill="currentColor"
+									>
+										<path
+											d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+										/>
+									</svg>
+									View Code
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-4">
+					<div class="project-card">
+						<div class="project-image">
+							<div class="project-placeholder">🗒️</div>
+						</div>
+						<div class="project-content">
+							<h3 class="project-title">Notes App</h3>
+							<p class="project-description">
+								This is a notes app where you can add, edit, and delete notes.
+							</p>
+							<div class="project-tech">
+								<span class="tech-tag">HTML</span>
+								<span class="tech-tag">CSS</span>
+							</div>
+							<div class="project-links">
+								<a
+									href="https://notes-app-dsj48.netlify.app/"
+									target="_blank"
+									rel="noopener noreferrer"
+									class="project-link"
+								>
+									<svg
+										width="20"
+										height="20"
+										viewBox="0 0 24 24"
+										fill="currentColor"
+									>
+										<path
+											d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+										/>
+									</svg>
+									Open Project
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-6 col-lg-4">
+					<div class="project-card">
+						<div class="project-image">
+							<div class="project-placeholder">🔒</div>
+						</div>
+						<div class="project-content">
+							<h3 class="project-title">Random Password Generator</h3>
+							<p class="project-description">
+								This is a random password generator where you can generate a
+								random password.
+							</p>
+							<div class="project-tech">
+								<span class="tech-tag">HTML</span>
+								<span class="tech-tag">CSS</span>
+								<span class="tech-tag">JavaScript</span>
+								<span class="tech-tag">API</span>
+							</div>
+							<div class="project-links">
+								<a
+									href="https://zavyerpasswordgenerator.netlify.app/"
+									target="_blank"
+									rel="noopener noreferrer"
+									class="project-link"
+								>
+									<svg
+										width="20"
+										height="20"
+										viewBox="0 0 24 24"
+										fill="currentColor"
+									>
+										<path
+											d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+										/>
+									</svg>
+									Open Project
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="contact" class="container contact-section py-5">
+			<div class="row">
+				<div class="col-lg-8 mx-auto">
+					<div class="text-center mb-4">
+						<h2 class="main-title">Get In Touch</h2>
+						<p class="main-description mt-3">
+							I'm always open to discussing new projects, creative ideas, or
+							opportunities to be part of your visions.
+						</p>
+					</div>
+					<div class="contact-content">
+						<div class="row g-4">
+							<div class="col-lg-6">
+								<div class="contact-info-cards">
+									<div class="row g-3">
+										<div class="col-md-6">
+											<div class="contact-card">
+												<div class="contact-icon">📧</div>
+												<h3 class="contact-card-title">Email</h3>
+												<p class="contact-card-text">
+													<a
+														href="mailto:zavyer42822@cccneb.edu"
+														class="contact-link"
+														>Email Me</a
+													>
+												</p>
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="contact-card">
+												<div class="contact-icon">💼</div>
+												<h3 class="contact-card-title">LinkedIn</h3>
+												<p class="contact-card-text">
+													<a
+														href="https://www.linkedin.com/in/zavyer-weller-1508b9327/"
+														target="_blank"
+														rel="noopener noreferrer"
+														class="contact-link"
+														>Connect with me</a
+													>
+												</p>
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="contact-card">
+												<div class="contact-icon">🐙</div>
+												<h3 class="contact-card-title">GitHub</h3>
+												<p class="contact-card-text">
+													<a
+														href="https://github.com/NoobAttack/portfolio-website-Zavyer-Weller"
+														target="_blank"
+														rel="noopener noreferrer"
+														class="contact-link"
+														>View my projects</a
+													>
+												</p>
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="contact-card">
+												<div class="contact-icon">💬</div>
+												<h3 class="contact-card-title">Let's Talk</h3>
+												<p class="contact-card-text">
+													Always open to new opportunities
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-6">
+								<div class="contact-form-card">
+									<h3 class="form-title">Send me a message</h3>
+									<form id="contact-form" class="contact-form">
+										<div class="form-group">
+											<label for="name" class="form-label">Name</label>
+											<input
+												type="text"
+												id="name"
+												name="name"
+												class="form-input"
+												required
+												placeholder="Your name"
+											/>
+										</div>
+										<div class="form-group">
+											<label for="email" class="form-label">Email</label>
+											<input
+												type="email"
+												id="email"
+												name="email"
+												class="form-input"
+												required
+												placeholder="your.email@example.com"
+											/>
+										</div>
+										<div class="form-group">
+											<label for="subject" class="form-label">Subject</label>
+											<input
+												type="text"
+												id="subject"
+												name="subject"
+												class="form-input"
+												required
+												placeholder="What's this about?"
+											/>
+										</div>
+										<div class="form-group">
+											<label for="message" class="form-label">Message</label>
+											<textarea
+												id="message"
+												name="message"
+												class="form-input form-textarea"
+												rows="5"
+												required
+												placeholder="Your message here..."
+											></textarea>
+										</div>
+										<button type="submit" class="btn-primary form-submit">
+											Send Message
+										</button>
+										<div id="form-message" class="form-message"></div>
+									</form>
+								</div>
+							</div>
+							<div class="thank-you-message">
+								<h3>Thank you for viewing my portfolio</h3>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<div class="row mt-4">
+			<div class="col-12 text-center">
+				<a href="#top" class="btn-back-top">Back to top</a>
+			</div>
+		</div>
 
 		<footer class="text-center p-4">&copy; 2025 Zavyer Weller</footer>
+
+		<script>
+			// Theme Toggle Functionality
+			const themeToggle = document.getElementById('theme-toggle');
+			const themeIcon = themeToggle.querySelector('.theme-icon');
+			const html = document.documentElement;
+
+			// Check for saved theme preference or default to dark
+			const currentTheme = localStorage.getItem('theme') || 'dark';
+			html.setAttribute('data-theme', currentTheme);
+			updateThemeIcon(currentTheme);
+
+			themeToggle.addEventListener('click', () => {
+				const currentTheme = html.getAttribute('data-theme');
+				const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+				html.setAttribute('data-theme', newTheme);
+				localStorage.setItem('theme', newTheme);
+				updateThemeIcon(newTheme);
+			});
+
+			function updateThemeIcon(theme) {
+				themeIcon.textContent = theme === 'dark' ? '☀️' : '🌙';
+			}
+
+			// Intersection Observer for Scroll Animations
+			const observerOptions = {
+				threshold: 0.1,
+				rootMargin: '0px 0px -50px 0px',
+			};
+
+			const observer = new IntersectionObserver((entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						entry.target.classList.add('animate-in');
+						observer.unobserve(entry.target);
+					}
+				});
+			}, observerOptions);
+
+			// Observe all sections and cards
+			document.addEventListener('DOMContentLoaded', () => {
+				const animateElements = document.querySelectorAll(
+					'.about-section, .skills-section, .projects-section, .contact-section, .about-card, .skill-badge, .contact-card, .project-card'
+				);
+				animateElements.forEach((el) => {
+					el.classList.add('animate-on-scroll');
+					observer.observe(el);
+				});
+
+				// Contact form handling
+				const contactForm = document.getElementById('contact-form');
+				const formMessage = document.getElementById('form-message');
+
+				if (contactForm) {
+					contactForm.addEventListener('submit', (e) => {
+						e.preventDefault();
+
+						const formData = new FormData(contactForm);
+						const name = formData.get('name');
+						const email = formData.get('email');
+						const subject = formData.get('subject');
+						const message = formData.get('message');
+
+						// Create mailto link (in production, you'd use a backend service)
+						const mailtoLink = `mailto:zavyer42822@cccneb.edu?subject=${encodeURIComponent(
+							subject
+						)}&body=${encodeURIComponent(
+							`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
+						)}`;
+
+						// Show success message
+						formMessage.textContent = 'Opening your email client...';
+						formMessage.className = 'form-message form-message-success';
+
+						// Open email client
+						window.location.href = mailtoLink;
+
+						// Reset form after a delay
+						setTimeout(() => {
+							contactForm.reset();
+							formMessage.textContent =
+								"Message sent! I'll get back to you soon.";
+						}, 1000);
+					});
+				}
+			});
+		</script>
 	</body>
 </html>
