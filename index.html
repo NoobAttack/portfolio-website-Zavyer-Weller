@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
@@ -8,7 +8,7 @@
 		<!-- SEO Meta Tags -->
 		<meta
 			name="description"
-			content="Zavyer Weller's portfolio website. Student learning web development with HTML, CSS, JavaScript, Vue.js, and more. View projects and get in touch."
+			content="Zavyer Weller's portfolio website. A student learning web development with HTML, CSS, JavaScript, Vue.js, and more. View projects and get in touch."
 		/>
 		<meta
 			name="keywords"
@@ -59,22 +59,26 @@
 			class="container d-flex align-items-center justify-content-center hero-section"
 		>
 			<div class="text-center">
-				<img
-					src="Weller_Zavyer_Vue_CLI/hello-world/src/assets/profilepic.jpg"
-					alt="A professional headshot of Zavyer Weller"
-					class="profile-image mb-4"
-					loading="lazy"
-					width="180"
-					height="180"
-				/>
+				<div class="profile-image-frame mb-4">
+					<img
+						src="photos/zavyer-sketch.png"
+						alt="A professional headshot of Zavyer Weller"
+						class="profile-image"
+						loading="lazy"
+						width="180"
+						height="180"
+					/>
+				</div>
 
 				<h1 class="hero-title">
-					Hello, my name is <span class="accent-text">Zavyer</span> <br />
-					Weller and I am learning how to code everyday
+					Hello, my name is <span class="accent-text">Zavyer Weller</span>.
+					<br />I'm learning new technologies and building projects to improve
+					my skills.
 				</h1>
 
 				<p class="main-description mx-auto hero-description">
-					I hope to improve my coding abilities each day
+					Open to opportunities, collaborations, and learning the latest in
+					software development.
 				</p>
 
 				<div class="hero-buttons mt-4">
@@ -95,7 +99,7 @@
 						<div class="about-card-icon">👨‍🎓</div>
 						<h3 class="about-card-title">Student & Learner</h3>
 						<p class="about-card-text">
-							I'm Zavyer Weller, a student learning new skills and learning new
+							I'm Zavyer Weller, a graduate student developing new skills and
 							coding techniques.
 						</p>
 					</div>
@@ -105,8 +109,8 @@
 						<div class="about-card-icon">🚀</div>
 						<h3 class="about-card-title">Building Projects</h3>
 						<p class="about-card-text">
-							Building small projects helps me to imrpove my ability to create
-							larger projects and different coding problems.
+							Building small projects helps me improve my ability to create
+							larger projects and solve different coding problems.
 						</p>
 					</div>
 				</div>
@@ -147,7 +151,7 @@
 				<div class="col-12 text-center mb-4">
 					<h2 class="main-title">Projects</h2>
 					<p class="main-description mt-3">
-						This is a list of projects I've been working on to improve my skills
+						A list of projects I've been working on to improve my skills.
 					</p>
 				</div>
 			</div>
@@ -160,9 +164,9 @@
 						<div class="project-content">
 							<h3 class="project-title">Portfolio Website</h3>
 							<p class="project-description">
-								This responsive portfolio website built with HTML, CSS, and
-								JavaScript. Features modern design, theme toggle, and smooth
-								animations.
+								A responsive portfolio website built with HTML, CSS, and
+								JavaScript. It features a modern design, a theme toggle, and
+								smooth animations.
 							</p>
 							<div class="project-tech">
 								<span class="tech-tag">HTML</span>
@@ -201,7 +205,7 @@
 						<div class="project-content">
 							<h3 class="project-title">Notes App</h3>
 							<p class="project-description">
-								This is a notes app where you can add, edit, and delete notes.
+								A notes app that lets you add, edit, and delete notes.
 							</p>
 							<div class="project-tech">
 								<span class="tech-tag">HTML</span>
@@ -239,8 +243,7 @@
 						<div class="project-content">
 							<h3 class="project-title">Random Password Generator</h3>
 							<p class="project-description">
-								This is a random password generator where you can generate a
-								random password.
+								A tool that generates secure random passwords on demand.
 							</p>
 							<div class="project-tech">
 								<span class="tech-tag">HTML</span>
@@ -281,7 +284,7 @@
 						<h2 class="main-title">Get In Touch</h2>
 						<p class="main-description mt-3">
 							I'm always open to discussing new projects, creative ideas, or
-							opportunities to be part of your visions.
+							opportunities to be part of your vision.
 						</p>
 					</div>
 					<div class="contact-content">
@@ -400,7 +403,7 @@
 								</div>
 							</div>
 							<div class="thank-you-message">
-								<h3>Thank you for viewing my portfolio</h3>
+								<h3>Thank you for viewing my portfolio.</h3>
 							</div>
 						</div>
 					</div>
@@ -456,7 +459,7 @@
 			// Observe all sections and cards
 			document.addEventListener('DOMContentLoaded', () => {
 				const animateElements = document.querySelectorAll(
-					'.about-section, .skills-section, .projects-section, .contact-section, .about-card, .skill-badge, .contact-card, .project-card'
+					'.about-section, .skills-section, .projects-section, .contact-section, .about-card, .skill-badge, .contact-card, .project-card',
 				);
 				animateElements.forEach((el) => {
 					el.classList.add('animate-on-scroll');
@@ -479,9 +482,9 @@
 
 						// Create mailto link (in production, you'd use a backend service)
 						const mailtoLink = `mailto:zavyer42822@cccneb.edu?subject=${encodeURIComponent(
-							subject
+							subject,
 						)}&body=${encodeURIComponent(
-							`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
+							`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
 						)}`;
 
 						// Show success message

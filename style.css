@@ -277,16 +277,37 @@ body > * {
 }
 
 /* Professional Image Styling */
-.profile-image {
+.profile-image-frame {
+	position: relative;
+	display: inline-block;
 	width: 180px;
 	height: 180px;
+	transition: all var(--transition-slow);
+	animation: float 3s ease-in-out infinite;
+	cursor: pointer;
+}
+
+.profile-image-frame::before {
+	content: '';
+	position: absolute;
+	inset: -28px;
+	background: url('photos/zavyer-sketch.png') center top / cover no-repeat;
+	border-radius: 50%;
+	z-index: 0;
+	opacity: 0.55;
+	filter: grayscale(15%);
+}
+
+.profile-image {
+	position: relative;
+	z-index: 1;
+	width: 100%;
+	height: 100%;
 	border-radius: 50%;
 	border: 4px solid var(--accent-color);
 	object-fit: cover;
 	box-shadow: var(--shadow-accent), var(--shadow-lg);
 	transition: all var(--transition-slow);
-	animation: float 3s ease-in-out infinite;
-	cursor: pointer;
 }
 
 @keyframes float {
@@ -299,8 +320,11 @@ body > * {
 	}
 }
 
-.profile-image:hover {
+.profile-image-frame:hover {
 	transform: translateY(-10px) scale(1.05);
+}
+
+.profile-image-frame:hover .profile-image {
 	box-shadow: 0 0 30px rgba(204, 214, 161, 0.5), var(--shadow-lg);
 	border-color: var(--accent-hover);
 }
@@ -450,9 +474,13 @@ footer {
 		font-size: 1rem;
 	}
 
-	.profile-image {
+	.profile-image-frame {
 		width: 150px;
 		height: 150px;
+	}
+
+	.profile-image-frame::before {
+		inset: -22px;
 	}
 
 	.hero-buttons {
@@ -510,9 +538,13 @@ footer {
 		font-size: 1.75rem;
 	}
 
-	.profile-image {
+	.profile-image-frame {
 		width: 120px;
 		height: 120px;
+	}
+
+	.profile-image-frame::before {
+		inset: -18px;
 	}
 
 	.skills-list {
