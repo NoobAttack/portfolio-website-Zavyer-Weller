@@ -36,6 +36,7 @@
 		<link rel="stylesheet" href="style.css" />
 	</head>
 	<body id="top">
+		<!-- Main menu to jump between page sections -->
 		<nav class="navbar navbar-dark py-3">
 			<div class="container d-flex align-items-center">
 				<a class="navbar-brand main-title mb-0" href="#">Zavyer Weller</a>
@@ -54,6 +55,7 @@
 			</div>
 		</nav>
 
+		<!-- Welcome area — photo, name, and a short introduction -->
 		<div
 			class="container d-flex align-items-center justify-content-center hero-section"
 		>
@@ -84,6 +86,7 @@
 			</div>
 		</div>
 
+		<!-- About me and the tools I use on my projects -->
 		<section id="about" class="container about-section py-5">
 			<div class="row">
 				<div class="col-12 text-center mb-4">
@@ -130,11 +133,12 @@
 			</div>
 		</section>
 
+		<!-- Projects I have built to practice and grow my skills -->
 		<section id="projects" class="container projects-section py-5">
 			<div class="row">
 				<div class="col-12 text-center mb-4">
 					<h2 class="main-title">Projects</h2>
-					<p class="main-description mt-3">
+					<p class="main-description mt-3 mx-auto text-center">
 						A list of projects I've been working on to improve my skills.
 					</p>
 				</div>
@@ -143,20 +147,18 @@
 				<div class="col-md-6 col-lg-4">
 					<div class="project-card">
 						<div class="project-image">
-							<div class="project-placeholder">🌐</div>
+							<div class="project-placeholder">🧊</div>
 						</div>
 						<div class="project-content">
-							<h3 class="project-title">Portfolio Website</h3>
+							<h3 class="project-title">Leftover Tracker</h3>
 							<p class="project-description">
-								A responsive portfolio website built with HTML, CSS, and
-								JavaScript. It features a modern design, a theme toggle, and
-								smooth animations.
+								An app that tracks leftovers in your fridge and shows a
+								countdown to each item's expiration date.
 							</p>
 							<div class="project-tech">
 								<span class="tech-tag">HTML</span>
 								<span class="tech-tag">CSS</span>
 								<span class="tech-tag">JavaScript</span>
-								<span class="tech-tag">Bootstrap</span>
 							</div>
 							<div class="project-links">
 								<a
@@ -261,6 +263,7 @@
 			</div>
 		</section>
 
+		<!-- How to reach me and send a message -->
 		<section id="contact" class="container contact-section py-5">
 			<div class="row">
 				<div class="col-lg-8 mx-auto">
@@ -403,12 +406,12 @@
 		<footer class="text-center p-4">&copy; 2025 Zavyer Weller</footer>
 
 		<script>
-			// Theme Toggle Functionality
+			// Light and dark mode — remembers the visitor's choice
 			const themeToggle = document.getElementById('theme-toggle');
 			const themeIcon = themeToggle.querySelector('.theme-icon');
 			const html = document.documentElement;
 
-			// Check for saved theme preference or default to dark
+			// Load saved theme or start in dark mode
 			const currentTheme = localStorage.getItem('theme') || 'dark';
 			html.setAttribute('data-theme', currentTheme);
 			updateThemeIcon(currentTheme);
@@ -425,7 +428,7 @@
 				themeIcon.textContent = theme === 'dark' ? '☀️' : '🌙';
 			}
 
-			// Intersection Observer for Scroll Animations
+			// Fade sections in as the user scrolls down the page
 			const observerOptions = {
 				threshold: 0.1,
 				rootMargin: '0px 0px -50px 0px',
@@ -440,7 +443,7 @@
 				});
 			}, observerOptions);
 
-			// Observe all sections and cards
+			// Run animations and contact form when the page loads
 			document.addEventListener('DOMContentLoaded', () => {
 				const animateElements = document.querySelectorAll(
 					'.about-section, .projects-section, .contact-section, .about-card, .skill-badge, .contact-card, .project-card',
@@ -450,7 +453,7 @@
 					observer.observe(el);
 				});
 
-				// Contact form handling
+				// Send the message through the visitor's email app
 				const contactForm = document.getElementById('contact-form');
 				const formMessage = document.getElementById('form-message');
 
@@ -464,21 +467,19 @@
 						const subject = formData.get('subject');
 						const message = formData.get('message');
 
-						// Create mailto link (in production, you'd use a backend service)
+						// Build the email with the form details
 						const mailtoLink = `mailto:zavyer42822@cccneb.edu?subject=${encodeURIComponent(
 							subject,
 						)}&body=${encodeURIComponent(
 							`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
 						)}`;
 
-						// Show success message
+						// Let the visitor know their email app is opening
 						formMessage.textContent = 'Opening your email client...';
 						formMessage.className = 'form-message form-message-success';
 
-						// Open email client
 						window.location.href = mailtoLink;
 
-						// Reset form after a delay
 						setTimeout(() => {
 							contactForm.reset();
 							formMessage.textContent =
